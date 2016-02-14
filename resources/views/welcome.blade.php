@@ -38,7 +38,10 @@
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Laravel 5</div>
+				<div class="title">Json Project</div>
+				@if(Session::has('message'))
+					<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
+				@endif
 				<div>
 
 					<form method="post" >

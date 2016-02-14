@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Session;
 
 class UserController extends Controller {
 
@@ -49,8 +50,10 @@ class UserController extends Controller {
         //to write into Json file (simple.json)
         file_put_contents('simple.json', json_encode($userArr));
 
+        //Create an messagge to show that data was updated
+        Session::flash('message', "Data updated." );
+        Session::flash('alert-class', 'alert-danger');
+
         return redirect('/');
     }
-
-
 }
