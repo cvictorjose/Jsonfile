@@ -28,9 +28,8 @@ class UserController extends Controller {
 	 * @return array
 	 */
 	public function getIndex() {
-		
-		return view('welcome');
-
+		$people = json_decode(file_get_contents('simple.json'));
+		return view('welcome',array('people'=>$people));
 	}
 
 
