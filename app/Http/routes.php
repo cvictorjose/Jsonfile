@@ -12,5 +12,5 @@
 */
 
 Route::get('/', 'UserController@getIndex');
-
+Route::post('/', 'UserController@postIndex');
 

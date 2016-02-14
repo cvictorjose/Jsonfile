@@ -41,7 +41,7 @@
 				<div class="title">Laravel 5</div>
 				<div>
 
-					<form>
+					<form method="post" >
 						<table>
 							<tr>
 								<th>Id_User</th>
@@ -56,7 +56,8 @@
 								</tr>
 							@endforeach
 						</table>
-						<input type="submit" value="OK" />
+						<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
+						<input type="submit" value="Update Users" />
 					</form>
 
 				</div>
