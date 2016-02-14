@@ -43,8 +43,7 @@
 					<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('message') }}</p>
 				@endif
 				<div>
-
-					<form method="post" >
+					<form method="post" name="user">
 						<table>
 							<tr>
 								<th>Id_User</th>
@@ -62,7 +61,6 @@
 						<input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
 						<input type="submit" value="Update Users" />
 					</form>
-
 				</div>
 			</div>
 		</div>
